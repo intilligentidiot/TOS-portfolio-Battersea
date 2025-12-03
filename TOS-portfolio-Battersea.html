@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Battersea Power Station MEP Coordination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'battersea-brick': '#b94e48', /* Inspired by the power station bricks */
+                        'battersea-dark': '#1a1f2c',
+                        'battersea-gray': '#f3f4f6',
+                        'brand-gold': '#C5A059',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b94e48;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8e3a35;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased selection:bg-battersea-brick selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img class="h-8 w-auto" src="https://www.teslaoutsourcingservices.com/images/tos-logo.svg" alt="Tesla Outsourcing Services">
+                    <div class="hidden md:block h-6 w-px bg-slate-300 mx-2"></div>
+                    <span class="hidden md:block font-medium text-slate-600 tracking-wide text-xs uppercase">Heritage Projects Division</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="text-slate-600 hover:text-battersea-brick px-3 py-2 rounded-md text-sm font-medium transition-colors">Overview</a>
+                    <a href="#deliverables" class="text-slate-600 hover:text-battersea-brick px-3 py-2 rounded-md text-sm font-medium transition-colors">Deliverables</a>
+                    <a href="#gallery" class="text-slate-600 hover:text-battersea-brick px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
+                    <a href="#contact" class="bg-battersea-brick text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors">Contact Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-slate-500 hover:text-battersea-brick">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="overview" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-battersea-dark">
+        <!-- Hero Background Image (Using one of the portfolio images as a backdrop) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-02.webp" 
+                 alt="Battersea MEP Model" 
+                 class="w-full h-full object-cover opacity-40 scale-105 animate-[pulse_10s_ease-in-out_infinite]">
+            <div class="absolute inset-0 bg-gradient-to-t from-battersea-dark via-battersea-dark/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 pt-20">
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="h-px w-10 bg-battersea-brick"></span>
+                    <span class="text-battersea-brick font-bold tracking-widest text-sm uppercase">Case Study</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
+                    MEP BIM Modeling & <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Coordination for Historic Building</span>
+                </h1>
+
+                <div class="flex flex-wrap gap-4 text-sm font-medium text-slate-300 mb-10">
+                    <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <i class="fas fa-map-marker-alt text-battersea-brick mr-2"></i> United Kingdom
+                    </div>
+                    <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <i class="fas fa-building text-battersea-brick mr-2"></i> Commercial / Heritage
+                    </div>
+                    <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <i class="fas fa-ruler-combined text-battersea-brick mr-2"></i> 50,000 m²
+                    </div>
+                    <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                        <i class="fas fa-layer-group text-battersea-brick mr-2"></i> LOD 350
+                    </div>
+                </div>
+
+                <p class="text-xl text-slate-300 leading-relaxed max-w-2xl border-l-4 border-battersea-brick pl-6">
+                   Revitalizing the <a href="https://www.teslaoutsourcingservices.com/portfolio/mep-bim-modeling-and-coordination-for-commercial-building.php" class="text-slate-300 hover:text-brand-gold transition-colors">iconic Battersea Power Station</a> through high-precision MEP Revit modeling and clash detection within a historic shell.
+                </p>
+            </div>
+        </div>
+
+        <!-- Scroll Down -->
+        <a href="#details" class="absolute bottom-10 right-10 flex items-center gap-4 text-white/50 hover:text-white transition-colors group cursor-pointer">
+            <span class="text-xs uppercase tracking-widest group-hover:tracking-[0.2em] transition-all">Project Details</span>
+            <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white transition-colors">
+                <i class="fas fa-arrow-down animate-bounce"></i>
+            </div>
+        </a>
+    </header>
+
+    <!-- Project Details / Narrative -->
+    <section id="details" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-on-scroll">
+                    <h2 class="text-4xl font-serif font-bold text-battersea-dark mb-6">The Challenge: <br>Modern Systems, Historic Shell</h2>
+                    <div class="w-20 h-1.5 bg-battersea-brick mb-8"></div>
+                    
+                    <div class="prose prose-lg text-slate-600">
+                        <p class="mb-6">
+                            Executed full MEP Revit modeling at <strong>LOD 350</strong> for the seven-storey Battersea Power Station redevelopment. This massive undertaking covered approximately <strong>50,000 m²</strong>, requiring the seamless integration of mechanical, electrical, plumbing, and fire-protection systems into the strictly protected historic shell.
+                        </p>
+                        <p>
+                            The team mapped complex ductwork, pipework, HVAC, and fire-sprinkler layouts against 2D service drawings and as-built surveys (Laser Scans). The critical task was resolving over <strong>250 model clashes</strong> through intensive coordination workshops.
+                        </p>
+                        <div class="bg-slate-50 border-l-4 border-brand-gold p-6 mt-8">
+                            <h4 class="font-bold text-battersea-dark mb-2">Outcome</h4>
+                            <p class="text-sm italic">Supplied coordinated shop drawings and clash-free BIM data in just <span class="text-brand-gold font-bold">15 working days</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative reveal-on-scroll delay-200">
+                    <div class="absolute -inset-4 bg-battersea-brick/10 rounded-2xl transform rotate-3"></div>
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-03.webp" 
+                         alt="Battersea MEP Coordination Model" 
+                         class="relative rounded-lg shadow-2xl w-full h-auto object-cover transform hover:-translate-y-2 transition-transform duration-500">
+                    <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur shadow-lg p-4 rounded-lg max-w-xs">
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Scope</p>
+                        <p class="text-battersea-dark font-medium">Full MEP Revit modeling & Clash Detection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables Section -->
+    <section id="deliverables" class="py-24 bg-battersea-gray relative">
+        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-battersea-dark">Project Deliverables</h2>
+                <p class="mt-4 text-slate-600">Comprehensive output delivered to the client.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 reveal-on-scroll">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                        <i class="fas fa-cube text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-3">LOD 350 Models</h3>
+                    <p class="text-slate-600 text-sm">Floor-wise 3D MEP Revit models developed to Level of Detail 350 for accurate pre-construction visualization.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 reveal-on-scroll delay-100">
+                    <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-green-600 mb-6">
+                        <i class="fas fa-project-diagram text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-3">Model Integration</h3>
+                    <p class="text-slate-600 text-sm">Coordinated BIM model integration across disciplines ensuring seamless data flow.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 reveal-on-scroll delay-200">
+                    <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600 mb-6">
+                        <i class="fas fa-pencil-ruler text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-3">Shop Drawings</h3>
+                    <p class="text-slate-600 text-sm">Coordinated MEP shop drawings ready for on-site fabrication and installation.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 reveal-on-scroll">
+                    <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center text-red-600 mb-6">
+                        <i class="fas fa-fire-extinguisher text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-3">Fire Protection</h3>
+                    <p class="text-slate-600 text-sm">Detailed fire protection system modeling compliant with safety regulations.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 reveal-on-scroll delay-100">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center text-orange-600 mb-6">
+                        <i class="fas fa-fan text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-3">HVAC Systems</h3>
+                    <p class="text-slate-600 text-sm">Ventilation and HVAC layout design optimized for the historic building's constraints.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 reveal-on-scroll delay-200">
+                    <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center text-teal-600 mb-6">
+                        <i class="fas fa-search text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-3">Clash Detection</h3>
+                    <p class="text-slate-600 text-sm">Multi-discipline clash detection and resolution to prevent on-site conflicts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal-on-scroll">
+                <div>
+                    <span class="text-battersea-brick font-bold tracking-widest text-xs uppercase">Portfolio</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-battersea-dark mt-2">Visual Documentation</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                   <p class="text-slate-500 text-sm">A visual journey through the coordinated systems.</p>
+                </div>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <!-- Image 1 -->
+                <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-01.webp" alt="MEP Model 01" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">MEP View I</span>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-02.webp" alt="MEP Model 02" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">MEP View II</span>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-03.webp" alt="MEP Model 03" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">MEP View III</span>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-05.webp" alt="MEP Model 05" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">MEP View IV</span>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-06.webp" alt="MEP Model 06" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">MEP View V</span>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-07.webp" alt="MEP Model 07" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">MEP View VI</span>
+                    </div>
+                </div>
+
+                 <!-- Image 7 -->
+                 <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-renovation-3.webp" alt="Renovation View" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">Renovation View</span>
+                    </div>
+                </div>
+                
+                 <!-- Image 8 -->
+                 <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-renovation-5.webp" alt="Renovation View" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">Renovation View II</span>
+                    </div>
+                </div>
+
+                 <!-- Image 9 -->
+                 <div class="gallery-item group relative overflow-hidden rounded-xl reveal-on-scroll">
+                    <img src="https://www.teslaoutsourcingservices.com/images/portfolio/mep-bim-modeling-mep-coordination-for-historic-building-renovation-8.webp" alt="Renovation View" class="w-full h-auto transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm text-sm">Renovation View III</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-battersea-dark text-white pt-24 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <img src="https://www.teslaoutsourcingservices.com/images/tos-logo-white.svg" alt="Tesla Outsourcing Services" class="h-10 w-auto mb-6">
+                    <p class="text-slate-400 max-w-sm mb-6">
+                        Delivering precise BIM and MEP solutions for complex heritage and commercial projects globally.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/company/tesla-outsourcing-services/" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-battersea-brick transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/teslaoutsource" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-battersea-brick transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/teslaos/" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-battersea-brick transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-brand-gold">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-battersea-brick"></i>
+                            <a href="mailto:services@teslaoutsourcingservices.com" class="hover:text-white transition-colors">services@teslaoutsourcingservices.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-battersea-brick"></i>
+                            <span>USA: +1 416 907 9430</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-battersea-brick"></i>
+                            <span>UK: +44 333 011 9045</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-battersea-brick"></i>
+                            <span>AUS: +61 386 521 136</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-brand-gold">Services</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">MEP BIM Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">BIM Coordination</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Scan to BIM</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Architectural BIM</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Steel Detailing</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2007 - 2025 Tesla Outsourcing Services LLC. All Rights Reserved.</p>
+                <div class="mt-4 md:mt-0 flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">DMCA Protected</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll Reveal Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
